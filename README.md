@@ -40,7 +40,7 @@ Before you begin, ensure you have met the following requirements:
 2. Navigate to the project directory:
 
    ```bash
-   cd my-authentication-app
+   cd Node.js-User-Authentication-System
    ```
 
 3. Install dependencies:
