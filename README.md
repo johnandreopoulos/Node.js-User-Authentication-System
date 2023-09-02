@@ -10,7 +10,6 @@ A secure user authentication system built with Node.js and bcrypt for password h
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Usage](#usage)
-    - [Additional Functions](#additional-functions)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -60,22 +59,22 @@ Before you begin, ensure you have met the following requirements:
 
 To use this authentication system, you can import the provided functions in your own application:
 
-```javascript
-const functions = require('./functions');
+`Certainly, providing examples of code usage and what functions return can be very helpful for users and potential contributors. Below, I've added code examples and descriptions for each function:
 
-// Example usage:
+```javascript
+// Create a new user account
 async function main() {
     try {
-        // Create a new user account
         await functions.createAccount('user1', 'password1');
+        console.log('User account created successfully.');
         
         // Load user information
         const user = await functions.loadUser('user1', 'password1');
-        console.log(user);
+        console.log('User loaded:', user);
 
         // Remove the user
         await functions.removeUser('user1');
-        console.log('User removed');
+        console.log('User removed successfully.');
     } catch (err) {
         console.error(err.message);
     }
@@ -84,11 +83,13 @@ async function main() {
 main();
 ```
 
-### Additional Functions
+- `createAccount(username, password)`: This function registers a new user with the provided username and password. If successful, it returns a confirmation message.
 
-- **Clear All Users**: Use `functions.clearAllUsers()` to delete all registered users from the system.
+- `loadUser(username, password)`: This function authenticates a user by username and password. If the authentication is successful, it returns the user information, including the username, original password (for reference), and encrypted password.
 
-- **Remove User**: Use `functions.removeUser(username)` to delete a specific user by their username.
+- `removeUser(username)`: This function deletes a specific user by their username. If successful, it returns a confirmation message.
+
+Here, I've added comments to describe what each function does and what it returns when used in your application. Users and contributors can follow these examples to understand how to use your authentication system functions effectively.
 
 ## Contributing
 
@@ -110,5 +111,3 @@ Contributions are welcome! Please follow these steps to contribute:
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 ```
-
-This updated README includes descriptions for the additional functions `clearAllUsers` and `removeUser`. Please replace "yourusername" and customize the content as needed for your specific project.
