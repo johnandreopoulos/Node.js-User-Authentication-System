@@ -52,7 +52,7 @@ Before you begin, ensure you have met the following requirements:
 4. Run the application:
 
    ```bash
-   node main.js
+   node index.js
    ```
 
 ## Usage
